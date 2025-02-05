@@ -59,6 +59,7 @@ The simulation uses the Euler-Maruyama method with full truncation to ensure non
    S_{t+dt} = S_t + \left(\mu - \lambda \left(e^{\mu_j + \frac{1}{2}\sigma_j^2} - 1\right)\right) S_t dt + \sqrt{\max(v_t, 0)} S_t \, dW_t^S + S_t \times J \times \text{(number of jumps)}
    \]
 
+
 ## How to Run
 
 1. **Prerequisites:**
@@ -78,7 +79,7 @@ The simulation uses the Euler-Maruyama method with full truncation to ensure non
    Execute the Python script:
 
    ```bash
-   python monte_carlo_heston_jumps.py
+   python jump_main.py
    ```
 
    This will run the simulation and display a plot of sample asset price paths.
@@ -103,8 +104,3 @@ Below are the key parameters used in the simulation:
   - \( \mu_j \): Mean log jump size
   - \( \sigma_j \): Standard deviation of log jump size
 
-## Conclusion
-
-This simulation offers an advanced framework for modeling asset prices that account for both stochastic volatility and jumps, providing a richer dynamic than the standard GBM. It is particularly useful for risk management, option pricing, and quantitative analysis in finance.
-
-Feel free to modify the parameters and extend the simulation as needed.
